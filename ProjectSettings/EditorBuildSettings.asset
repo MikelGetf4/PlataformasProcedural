@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Settings/Scenes/URP2DSceneTemplate.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Inicio.unity
+    guid: 27247a2fcae77d342b77dd1d613a926d
+  - enabled: 1
+    path: Assets/Scenes/Juego.unity
+    guid: a63a1546ef956074785115ab8fafe95d
+  - enabled: 1
+    path: Assets/Scenes/GameOverScene.unity
+    guid: c9911479972db4e478624b3c71531c4c
   m_configObjects: {}

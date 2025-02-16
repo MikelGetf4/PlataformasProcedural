@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;  // Necesario para cambiar de escena
 
 public class PlayerController : MonoBehaviour
 {
@@ -72,6 +73,20 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = false;
+        }
+    }
+
+    // Detecta el trigger con la etiqueta "Muerte"
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Muerte"))
+        {
+            // Guardar la puntuación cuando el jugador muere
+            GameManager.instance.SaveScore();  // Llamamos a GameManager para guardar la puntuación
+
+            // Aquí finaliza el juego y cambiamos la escena
+            Debug.Log("¡Has muerto!");
+            SceneManager.LoadScene("GameOverScene");  // Asegúrate de tener una escena llamada "GameOverScene" o cámbiala por la que prefieras
         }
     }
 }
